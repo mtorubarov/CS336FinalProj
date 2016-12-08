@@ -29,7 +29,7 @@
 		
 		
 		//PUT QUERY HERE. LIST OUT 
-		String str = "SELECT com_name, com_state, dis_amo, dis_dat, dis_pur_des, rec_name  FROM (SELECT * FROM Transactions t WHERE t.tra_id IN (SELECT p.tra_id FROM PerformedBy p WHERE p.com_id IN (SELECT com.com_id FROM  (SELECT s.com_id, c.can_id, c.can_name, c.party, c.outcome, c.percent2016, c.can_inc_cha_ope_sea, c.off_state, c.dist_num FROM Candidates c LEFT JOIN Supports s ON c.can_id=s.can_id) supporting LEFT JOIN Committees com ON supporting.com_id=com.com_id))  ORDER BY dis_amo DESC LIMIT 10) biggestTransactions  INNER JOIN PerformedBy whoseTransaction INNER JOIN Committees theirs ON biggestTransactions.tra_id=whoseTransaction.tra_id AND theirs.com_id=whoseTransaction.com_id ORDER BY dis_amo DESC;";
+		String str = "SELECT com_name, com_state, dis_amo, dis_dat, dis_pur_des, rec_name  FROM (SELECT * FROM Transactions t WHERE t.tra_id IN (SELECT p.tra_id FROM PerformedBy p WHERE p.com_id IN (SELECT com.com_id FROM  (SELECT s.com_id, c.can_id, c.can_name, c.party, c.outcome, c.percent2016, c.can_inc_cha_ope_sea, c.off_state, c.dist_num FROM Candidates c LEFT JOIN Supports s ON c.can_id=s.can_id) supporting LEFT JOIN Committees com ON supporting.com_id=com.com_id))  ORDER BY dis_amo DESC LIMIT 10) biggestTransactions  INNER JOIN PerformedBy whoseTransaction INNER JOIN Committees theirs ON biggestTransactions.tra_id=whoseTransaction.tra_id AND theirs.com_id=whoseTransaction.com_id ORDER BY dis_amo DESC";
 		
 		//Run the query against the DB
 		ResultSet result = stmt.executeQuery(str);

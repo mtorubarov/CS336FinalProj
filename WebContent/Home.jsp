@@ -89,7 +89,7 @@ ex: DERICKSON, TIMOTHY
 
 <br>
 <br>
-Find the committees with the most disbursements.
+Find the committees with the most individual contributions.
 <form method="get" action="commByDisbursement.jsp" enctype=text/plain>
 	<select name="lim" size=1>
 		<option value="5000000">more than $5,000,000</option>
@@ -112,7 +112,7 @@ Take a look at the 10 largest disbursements made to see where the biggest transa
 <br>
 <br>
 
-Enter a year to find the average amount spent per month in 2016 to gauge how much you should be spending in the months leading up to the election
+Enter a year to find the average amount spent per month to gauge how much you should be spending in the months leading up to the election
 <br>
 <form method="get" action="monthChart.jsp" enctype =text/plain>
 	<input type="text" name="year">
