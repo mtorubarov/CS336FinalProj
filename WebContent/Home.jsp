@@ -80,9 +80,9 @@ ex: DERICKSON, TIMOTHY
 	<br>
 	<input type="radio" name="command" value="all" checked>All Disbursements
 	<br>
-	<input type="radio" name="command" value="food">Food Expenses Only
+	<input type="radio" name="command" value="travel">Food Expenses Only
 	<br>
-	<input type="radio" name="command" value="travel">Travel Expenses Only
+	<input type="radio" name="command" value="food">Travel Expenses Only
 	<br>
 	<input type="submit" value="submit">
 </form>
